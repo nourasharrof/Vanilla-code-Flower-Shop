@@ -10,6 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -81,6 +82,8 @@ nav {
 
 .nav-link a {
   font-weight: bold;
+  color: #5c5657;
+  text-transform: capitalize;
 }
 .nav-link a:hover {
   color: var(--primary);
@@ -90,23 +93,24 @@ nav {
   display: none;
 }
 
-/* HEADER */
-header {
+/* hero */
+.hero {
   min-height: 100vh;
-  background: url("../img/flower18.jpg") center/cover no-repeat;
+  background: url("../img/pretty-flowers-cone.jpg");
+  background-size: cover;
   display: flex;
   align-items: center;
   padding: 6rem 1rem;
 }
 
-.header-container h1 {
+.hero-container h1 {
   font-size: clamp(2rem, 5vw, 4rem);
   color: var(--primary);
   font-family: "Great Vibes", cursive;
 }
 
-.header-container p {
-  font-size: clamp(1rem, 3vw, 1.8rem);
+.hero-container p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
   max-width: 600px;
 }
 
@@ -117,6 +121,9 @@ section {
 }
 
 /* REGARDING */
+.regarding-container {
+  padding: clamp(3rem, 8vw, 8rem) 1.5rem;
+}
 .regarding-contaents {
   background: var(--pink);
   padding: 2rem;
@@ -129,8 +136,9 @@ section {
 .about-container {
   padding: clamp(3rem, 8vw, 8rem) 1.5rem;
 
-  background-image: url(../img/regard.jpg);
+  background-image: url(../img/outdoor-flowers.jpg);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 .about-item-container {
@@ -144,12 +152,18 @@ section {
   padding: 2rem;
   border-radius: 15px;
 }
+.about-container .title {
+  color: var(--primary);
+}
 
 /* FLOWERS */
 
 .our-flowers-container {
   padding: clamp(3rem, 8vw, 8rem) 1.5rem;
-  background: white;
+
+  background: url(../img/woman-holds-festive-flower-arrangement-with-bright-chrysanthemum-flowers.jpg);
+  background-position: center;
+  background-size: cover;
 }
 .our-flowers-items-container {
   display: grid;
@@ -166,9 +180,10 @@ section {
 /* OCCASIONS */
 .occasions-container {
   padding: clamp(3rem, 8vw, 8rem) 1.5rem;
-  background-image: url("../img/flower-red.jpg");
+  background-image: url("../img/outdoor-flowers.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   width: 100%;
 }
 .occasions-items-container {
@@ -187,6 +202,10 @@ section {
 .concat-container {
   padding: clamp(3rem, 8vw, 8rem) 1.5rem;
   background-color: #fff;
+  background-image: url(../img/newFlower2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .container-form form {
   display: flex;
@@ -229,6 +248,9 @@ textarea {
 }
 .item-review:hover {
   transform: rotate(5deg);
+}
+.reviews-container .name {
+  color: var(--primary);
 }
 
 /* FOOTER */
@@ -307,12 +329,12 @@ footer {
 }
 
 @media (max-width: 844px) {
-  header {
+  .hero {
     text-align: center;
     justify-content: center;
   }
 
-  .header-container p {
+  .hero-container p {
     margin: auto;
   }
   nav {
@@ -339,7 +361,7 @@ footer {
   }
 
   .nav-link {
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
   }
 
